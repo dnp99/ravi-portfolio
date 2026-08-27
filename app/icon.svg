@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#11110f" />
+  <text
+    x="7"
+    y="43"
+    fill="#f2f0e9"
+    font-family="Arial Black, Arial, sans-serif"
+    font-size="31"
+    font-weight="900"
+    letter-spacing="-3"
+  >DP</text>
+  <circle cx="54" cy="47" r="5" fill="#f05a32" />
+</svg>
