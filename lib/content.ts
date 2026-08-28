@@ -35,6 +35,8 @@ export interface PortfolioContent {
     role: string;
     location: string;
     headline: string;
+    image: string;
+    imageAlt: string;
     about: string[];
     fieldNote: string;
     availability: string;
@@ -114,6 +116,8 @@ export function getPortfolio(): PortfolioContent {
       role: site.fields.role ?? 'Writer / Director / Producer',
       location: site.fields.location ?? '',
       headline: site.fields.headline ?? '',
+      image: site.fields.image ?? '',
+      imageAlt: site.fields.imageAlt ?? `${site.fields.name ?? 'Ravi Rekhi'} portrait`,
       about: site.body.split('\n\n').filter((paragraph) => !paragraph.startsWith('## ')),
       fieldNote: site.fields.fieldNote ?? '',
       availability: site.fields.availability ?? '',

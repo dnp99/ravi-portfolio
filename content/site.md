@@ -3,6 +3,8 @@ name: Ravi Rekhi
 role: Writer / Director / Producer
 location: Toronto, Canada
 headline: Stories about private lives, strange systems, and the things people do to feel less alone.
+image: /media/ravi-portrait.jpg
+imageAlt: Ravi Rekhi on a bicycle in Amsterdam
 availability: Open to thoughtful collaborations
 email: ravirekhi11@gmail.com
 instagram: https://www.instagram.com/

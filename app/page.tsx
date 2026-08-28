@@ -62,10 +62,13 @@ export default function Home() {
 
         <header className="intro-panel" id="top">
           <div className="intro-main">
-            <p className="intro-location">{portfolio.profile.location}</p>
-            <h1>{portfolio.profile.name}</h1>
-            <h2>{portfolio.profile.role}</h2>
-            <p className="intro-headline">{portfolio.profile.headline}</p>
+            <div className="intro-copy">
+              <p className="intro-location">{portfolio.profile.location}</p>
+              <h1>{portfolio.profile.name}</h1>
+              <h2>{portfolio.profile.role}</h2>
+              <p className="intro-headline">{portfolio.profile.headline}</p>
+            </div>
+            {portfolio.profile.image && <div className="intro-portrait"><Image src={portfolio.profile.image} alt={portfolio.profile.imageAlt} fill sizes="(max-width: 760px) 100vw, 28vw" priority /></div>}
           </div>
 
           <div className="intro-footer">
