@@ -648,10 +648,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .film-notes li { padding: 7px 10px; border: 1px solid var(--line); color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
 .portrait-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 56px; }
 .portrait-tile { margin: 0; }
-.portrait-placeholder { position: relative; aspect-ratio: 3 / 4; overflow: hidden; display: flex; align-items: flex-end; padding: 15px; background: linear-gradient(145deg, #3d3830, #161515 70%); }
+.portrait-placeholder { position: relative; aspect-ratio: 3 / 2; overflow: hidden; display: flex; align-items: flex-end; padding: 15px; background: linear-gradient(145deg, #3d3830, #161515 70%); }
+.portrait-placeholder-portrait { aspect-ratio: 2 / 3; }
 .portrait-tile-1 .portrait-placeholder { background: linear-gradient(155deg, #65706b, #1d2321 64%); }
 .portrait-tile-2 .portrait-placeholder { background: linear-gradient(145deg, #926b53, #2c211d 68%); }
-.portrait-placeholder::after { content: ''; position: absolute; inset: 15% 15% 20%; border: 1px solid rgba(238,229,215,.25); border-radius: 50% 48% 42% 50%; transform: rotate(12deg); }
+.portrait-placeholder:not(:has(img))::after { content: ''; position: absolute; inset: 15% 15% 20%; border: 1px solid rgba(238,229,215,.25); border-radius: 50% 48% 42% 50%; transform: rotate(12deg); }
 .portrait-placeholder img { object-fit: cover; }
 .portrait-placeholder span { position: relative; z-index: 1; color: rgba(238,229,215,.62); font: 12px var(--mono); }
 .portrait-tile figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; color: var(--muted); font: 11px var(--mono); }

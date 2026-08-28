@@ -18,6 +18,7 @@ export interface PortraitEntry {
   title: string;
   note: string;
   number: string;
+  orientation: 'landscape' | 'portrait';
   image?: string;
   alt?: string;
 }
@@ -93,6 +94,7 @@ export function getPortfolio(): PortfolioContent {
       title: document.fields.title ?? 'Untitled study',
       note: document.fields.location ?? '',
       number: document.fields.number ?? String(index + 1).padStart(2, '0'),
+      orientation: document.fields.orientation === 'portrait' ? ('portrait' as const) : ('landscape' as const),
       image: document.fields.image || undefined,
       alt: document.fields.alt || undefined,
     };
