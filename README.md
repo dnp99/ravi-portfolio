@@ -27,4 +27,4 @@ The site runs at `http://localhost:3000`. Content changes are picked up by the N
 
 GitHub Actions builds and deploys the static site to GitHub Pages after changes land on `main`. Ravi only needs to work with Codex and GitHub; the build runs remotely.
 
-The site uses the custom domain `ravirekhi.com`. In GitHub, open **Settings > Pages**, select **GitHub Actions** as the source, and add `ravirekhi.com` as the custom domain. Configure the domain's DNS with the GitHub Pages records shown there. The committed `public/CNAME` file keeps the custom-domain setting in the deployed artifact.
+The site currently deploys at `https://dnp99.github.io/ravi-portfolio/`. The workflow builds with the repository path prefix so its assets load correctly there. When a custom domain is ready, update `NEXT_PUBLIC_BASE_PATH` in `.github/workflows/deploy.yml` to an empty value and add the chosen domain in GitHub Pages settings.
