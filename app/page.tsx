@@ -32,11 +32,12 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function FilmFrame({ film }: { film: (typeof portfolio.films)[number] }) {
   return (
-    <div className={`film-frame film-frame-${film.tone}`} aria-label={`${film.title} film still placeholder`}>
-      {film.image && <Image className="film-frame-image" src={film.image} alt={film.alt ?? `${film.title} film still`} fill sizes="(max-width: 760px) 100vw, 58vw" />}
-      <span className="film-frame-grain" aria-hidden="true" />
-      <span className="film-frame-mark">{film.title}</span>
-      <span className="film-frame-caption">still / {film.year}</span>
+    <div className={`film-stills film-frame-${film.tone}`} aria-label={`${film.title} stills`}>
+      {film.images.length > 0 ? film.images.map((image, index) => (
+        <div className={`film-still ${index === 0 ? 'film-still-featured' : ''}`} key={image}>
+          <Image src={image} alt={`${film.imageAlt ?? `${film.title} film still`} ${index + 1}`} fill sizes="(max-width: 760px) 100vw, 58vw" />
+        </div>
+      )) : <div className="film-frame"><span className="film-frame-grain" aria-hidden="true" /><span className="film-frame-mark">{film.title}</span><span className="film-frame-caption">still / {film.year}</span></div>}
     </div>
   );
 }

@@ -9,8 +9,8 @@ export interface FilmProject {
   logline: string;
   notes: string[];
   link?: string;
-  image?: string;
-  alt?: string;
+  images: string[];
+  imageAlt?: string;
   tone: 'amber' | 'blue' | 'red';
 }
 
@@ -82,8 +82,8 @@ export function getPortfolio(): PortfolioContent {
       logline: document.body,
       notes: document.fields.notes?.split('|').map((note) => note.trim()).filter(Boolean) ?? [],
       link: document.fields.videoUrl || undefined,
-      image: document.fields.heroImage || undefined,
-      alt: document.fields.heroAlt || `${document.fields.title ?? 'Film'} still`,
+      images: document.fields.gallery?.split('|').map((image) => image.trim()).filter(Boolean) ?? [],
+      imageAlt: document.fields.heroAlt || `${document.fields.title ?? 'Film'} still`,
       tone: asTone(document.fields.tone ?? 'amber'),
     };
   });
