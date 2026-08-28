@@ -125,16 +125,16 @@ export default function Home() {
             }))} />
           </section>
 
-          <section className="content-section development-section" id="development">
-            <SectionLabel>In development</SectionLabel>
-            {portfolio.development.map((project) => (
-              <article className="development-entry" key={project.title}>
-                <p className="project-number">{project.format}</p>
-                <h3>{project.title}</h3>
-                <div className="development-copy"><p>{project.description}</p>{project.credits && <p className="development-credits">{project.credits}</p>}</div>
-              </article>
-            ))}
-          </section>
+          {portfolio.development.length > 0 && <section className="content-section development-section" id="development">
+              <SectionLabel>In development</SectionLabel>
+              {portfolio.development.map((project) => (
+                <article className="development-entry" key={project.title}>
+                  <p className="project-number">{project.format}</p>
+                  <h3>{project.title}</h3>
+                  <div className="development-copy"><p>{project.description}</p>{project.credits && <p className="development-credits">{project.credits}</p>}</div>
+                </article>
+              ))}
+            </section>}
 
           <section className="content-section contact-section" id="contact">
             <SectionLabel>Start a conversation</SectionLabel>
