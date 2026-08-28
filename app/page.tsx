@@ -33,17 +33,17 @@ export default function Home() {
               <ThemeToggle />
             </div>
 
-            <p className="intro-location">{portfolio.profile.location}</p>
-            <h1>{portfolio.profile.name}</h1>
-            <h2>{portfolio.profile.role}</h2>
-            <p className="intro-headline">{portfolio.profile.headline}</p>
-
             <nav className="section-nav" aria-label="Portfolio sections">
               <a href="#about"><span />About</a>
               <a href="#films"><span />Films</a>
               <a href="#portraits"><span />Portraits</a>
               <a href="#contact"><span />Contact</a>
             </nav>
+
+            <p className="intro-location">{portfolio.profile.location}</p>
+            <h1>{portfolio.profile.name}</h1>
+            <h2>{portfolio.profile.role}</h2>
+            <p className="intro-headline">{portfolio.profile.headline}</p>
           </div>
 
           <div className="intro-footer">
