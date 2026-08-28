@@ -27,7 +27,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   min-width: 320px;
@@ -686,7 +686,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-icon { width: 15px; height: 15px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.7; }
 .contact-icon-fill { fill: currentColor; stroke: none; }
 .journal-topbar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 18px 0; border-bottom: 1px solid var(--line); background: var(--header-background); }
-.journal-topbar::before { content: ''; position: absolute; z-index: -1; inset: 0 -100vw; background: var(--header-background); border-bottom: 1px solid var(--line); }
+.journal-topbar::before { content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--header-background); border-bottom: 1px solid var(--line); }
 .journal-topbar .wordmark { margin: 0; }
 .journal-topbar .section-nav { margin: 0; padding: 0; border: 0; }
 .journal-shell { display: block; width: min(100%, 1480px); }
