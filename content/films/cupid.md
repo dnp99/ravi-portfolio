@@ -6,7 +6,7 @@ runtime: 10 minutes
 notes: Short film | Currently in circulation
 tone: amber
 featured: true
-gallery: /media/cupid-still-5.jpg | /media/cupid-still-2.jpg | /media/cupid-still-4.jpg
+gallery: /media/cupid-still-4.jpg | /media/cupid-still-5.jpg | /media/cupid-still-2.jpg
 heroAlt: C.U.P.I.D. film still
 videoUrl:
 ---
