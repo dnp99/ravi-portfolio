@@ -17,16 +17,16 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const siteUrl = "https://dnp99.github.io/portfolio";
+const siteUrl = "https://www.ravirekhi.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Deep Patel | Senior Software Engineer",
+  title: "Ravi Rekhi | Writer / Director / Producer",
   description:
-    "Senior software engineer in Toronto building reliable distributed systems, cloud infrastructure, and polished products.",
+    "Ravi Rekhi is a Toronto-based writer, director, and producer.",
   openGraph: {
-    title: "Deep Patel | Senior Software Engineer",
-    description: "I build software that holds up in the real world.",
+    title: "Ravi Rekhi | Writer / Director / Producer",
+    description: "Stories about private lives, strange systems, and the things people do to feel less alone.",
     type: "website",
     url: siteUrl,
     images: [
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og.png`,
         width: 1536,
         height: 1024,
-        alt: "Deep Patel, senior software engineer",
+        alt: "Ravi Rekhi, writer and director",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deep Patel | Senior Software Engineer",
-    description: "I build software that holds up in the real world.",
+    title: "Ravi Rekhi | Writer / Director / Producer",
+    description: "Stories about private lives, strange systems, and the things people do to feel less alone.",
     images: [`${siteUrl}/og.png`],
   },
 };
