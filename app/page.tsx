@@ -26,20 +26,19 @@ export default function Home() {
       <div className="ambient-glow" aria-hidden="true" />
 
       <main className="portfolio-shell journal-shell">
+        <div className="journal-topbar">
+          <a className="wordmark" href="#top" aria-label="Ravi Rekhi, home">RR<span>.</span></a>
+          <nav className="section-nav" aria-label="Portfolio sections">
+            <a href="#about"><span />About</a>
+            <a href="#films"><span />Films</a>
+            <a href="#portraits"><span />Portraits</a>
+            <a href="#contact"><span />Contact</a>
+          </nav>
+          <ThemeToggle />
+        </div>
+
         <header className="intro-panel" id="top">
           <div className="intro-main">
-            <div className="intro-topbar">
-              <a className="wordmark" href="#top" aria-label="Ravi Rekhi, home">RR<span>.</span></a>
-              <ThemeToggle />
-            </div>
-
-            <nav className="section-nav" aria-label="Portfolio sections">
-              <a href="#about"><span />About</a>
-              <a href="#films"><span />Films</a>
-              <a href="#portraits"><span />Portraits</a>
-              <a href="#contact"><span />Contact</a>
-            </nav>
-
             <p className="intro-location">{portfolio.profile.location}</p>
             <h1>{portfolio.profile.name}</h1>
             <h2>{portfolio.profile.role}</h2>

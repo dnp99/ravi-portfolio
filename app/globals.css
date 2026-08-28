@@ -681,14 +681,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .section-nav { display: flex; flex-wrap: wrap; gap: 14px 20px; width: auto; }
 .journal-shell .section-nav a { gap: 0; }
 .journal-shell .section-nav a span { display: none; }
+.journal-topbar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 18px 0; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 86%, transparent); backdrop-filter: blur(14px); }
+.journal-topbar .wordmark { margin: 0; }
+.journal-topbar .section-nav { margin: 0; padding: 0; border: 0; }
+.journal-topbar .theme-toggle { justify-self: end; }
 .journal-shell { display: block; width: min(100%, 1480px); }
-.journal-shell .intro-panel { position: relative; height: auto; min-height: 0; padding: 34px 0 54px; border-bottom: 1px solid var(--line); }
-.journal-shell .intro-topbar { margin-bottom: 22px; align-items: center; }
-.journal-shell .section-nav { margin: 0 0 62px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.journal-shell .intro-panel { position: relative; height: auto; min-height: 0; padding: 74px 0 54px; border-bottom: 1px solid var(--line); }
 .journal-shell .intro-footer { margin-top: 46px; }
 .journal-shell .content-panel { width: 100%; }
 .journal-shell .about-section { min-height: 0; }
 .journal-shell .film-entry { grid-template-columns: minmax(380px, 1.25fr) minmax(320px, .75fr); }
 .journal-shell .portrait-grid { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 760px) { .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame { min-height: 340px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } }
+@media (max-width: 760px) { .journal-topbar { grid-template-columns: auto 1fr auto; gap: 14px; } .journal-topbar .section-nav { gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame { min-height: 340px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } }
 @media (max-width: 480px) { .portrait-grid { gap: 22px 10px; } .portrait-tile figcaption { display: grid; gap: 4px; } }
