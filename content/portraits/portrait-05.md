@@ -2,6 +2,6 @@
 title: Untitled study 05
 location: Toronto, 2024
 number: 05
-image:
-alt: Film portrait study from Toronto
+image: /media/portrait-05.jpg
+alt: Minolta X-700 SLR film photograph
 ---
