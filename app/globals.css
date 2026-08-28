@@ -640,9 +640,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   --accent: #d88b58;
   --accent-soft: rgba(216, 139, 88, 0.14);
   --line: rgba(238, 229, 215, 0.16);
+  --header-background: #211c18;
   --display: Georgia, 'Times New Roman', serif;
 }
-:root[data-theme="light"] { --background: #eee8dd; --surface: #f5f0e7; --surface-raised: #e2d8ca; --text: #2d2924; --muted: #70665b; --faint: #948878; --accent: #a85235; --line: rgba(45, 41, 36, 0.17); }
+:root[data-theme="light"] { --background: #eee8dd; --surface: #f5f0e7; --surface-raised: #e2d8ca; --text: #2d2924; --muted: #70665b; --faint: #948878; --accent: #a85235; --line: rgba(45, 41, 36, 0.17); --header-background: #e4dbcf; }
 .journal-shell .intro-panel h1 { font-family: var(--display); font-weight: 400; letter-spacing: -.065em; }
 .journal-shell .intro-panel h2 { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 .journal-shell .intro-headline { font-family: var(--display); font-size: 20px; line-height: 1.55; }
@@ -681,7 +682,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .section-nav { display: flex; flex-wrap: wrap; gap: 14px 20px; width: auto; }
 .journal-shell .section-nav a { gap: 0; }
 .journal-shell .section-nav a span { display: none; }
-.journal-topbar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 18px 0; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--background) 86%, transparent); backdrop-filter: blur(14px); }
+.journal-topbar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 18px 0; border-bottom: 1px solid var(--line); background: var(--header-background); }
+.journal-topbar::before { content: ''; position: absolute; z-index: -1; inset: 0 -100vw; background: var(--header-background); border-bottom: 1px solid var(--line); }
 .journal-topbar .wordmark { margin: 0; }
 .journal-topbar .section-nav { margin: 0; padding: 0; border: 0; }
 .journal-topbar .theme-toggle { justify-self: end; }
