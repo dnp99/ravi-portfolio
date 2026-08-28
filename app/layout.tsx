@@ -50,15 +50,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html
       className={`${archivo.variable} ${workSans.variable} ${jetBrainsMono.variable}`}
+      data-theme="light"
       lang="en"
-      suppressHydrationWarning
     >
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => { const saved = localStorage.getItem("portfolio-theme"); document.documentElement.dataset.theme = saved === "dark" ? "dark" : "light"; })()`,
-          }}
-        />
         {children}
       </body>
     </html>

@@ -1,4 +1,3 @@
-import { ThemeToggle } from '../components/ThemeToggle';
 import { portfolio } from '../content/portfolio';
 
 function Arrow() {
@@ -53,7 +52,6 @@ export default function Home() {
             <a href="#portraits"><span />Portraits</a>
             <a href="#contact"><span />Contact</a>
           </nav>
-          <ThemeToggle />
         </div>
 
         <header className="intro-panel" id="top">
