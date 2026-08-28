@@ -5,6 +5,25 @@ function Arrow() {
   return <span aria-hidden="true">{'\u2197'}</span>;
 }
 
+function ContactIcon({ kind }: { kind: 'instagram' | 'email' }) {
+  if (kind === 'instagram') {
+    return (
+      <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.4" cy="6.7" r="1" className="contact-icon-fill" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4.5 7 7.5 6 7.5-6" />
+    </svg>
+  );
+}
+
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="section-label">{children}</p>;
 }
@@ -48,8 +67,8 @@ export default function Home() {
           <div className="intro-footer">
             <p className="availability"><i />{portfolio.profile.availability}</p>
             <div className="profile-links">
-              <a href={portfolio.contact.instagram} target="_blank" rel="noreferrer">Instagram <Arrow /></a>
-              <a href={`mailto:${portfolio.contact.email}`}>Email <Arrow /></a>
+              <a href={portfolio.contact.instagram} target="_blank" rel="noreferrer"><ContactIcon kind="instagram" />Instagram <Arrow /></a>
+              <a href={`mailto:${portfolio.contact.email}`}><ContactIcon kind="email" />Email <Arrow /></a>
             </div>
           </div>
         </header>
