@@ -666,7 +666,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .gallery-caption span { color: rgba(245,240,231,.7); }
 .gallery-caption small { margin-left: auto; color: rgba(245,240,231,.56); }
 .gallery-close, .gallery-control { border: 1px solid rgba(245,240,231,.3); color: #f5f0e7; background: transparent; font: 12px var(--mono); cursor: pointer; }
-.gallery-close { position: absolute; top: 20px; right: 24px; padding: 8px 11px; }
+.gallery-close { position: absolute; top: 20px; right: 24px; width: 42px; height: 42px; padding: 0; border-radius: 50%; font-size: 24px; line-height: 1; }
 .gallery-control { width: 42px; height: 42px; border-radius: 50%; font-size: 20px; }
 .gallery-close:hover, .gallery-control:hover { border-color: #f5f0e7; }
 .portrait-tile figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; color: var(--muted); font: 11px var(--mono); }
