@@ -74,6 +74,12 @@ function asTone(value: string): FilmProject['tone'] {
 }
 
 const contentRoot = path.join(process.cwd(), 'content');
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+function withBasePath(value: string) {
+  if (!value || /^https?:\/\//.test(value)) return value;
+  return `${basePath}${value.startsWith('/') ? value : `/${value}`}`;
+}
 
 export function getPortfolio(): PortfolioContent {
   const site = readDocument(path.join(contentRoot, 'site.md'));
@@ -88,7 +94,7 @@ export function getPortfolio(): PortfolioContent {
       credits: document.fields.credits ?? '',
       notes: document.fields.notes?.split('|').map((note) => note.trim()).filter(Boolean) ?? [],
       link: document.fields.videoUrl || undefined,
-      images: document.fields.gallery?.split('|').map((image) => image.trim()).filter(Boolean) ?? [],
+      images: document.fields.gallery?.split('|').map((image) => withBasePath(image.trim())).filter(Boolean) ?? [],
       imageAlt: document.fields.heroAlt || `${document.fields.title ?? 'Film'} still`,
       tone: asTone(document.fields.tone ?? 'amber'),
     };
@@ -100,7 +106,7 @@ export function getPortfolio(): PortfolioContent {
       note: document.fields.location ?? '',
       number: document.fields.number ?? String(index + 1).padStart(2, '0'),
       orientation: document.fields.orientation === 'portrait' ? ('portrait' as const) : ('landscape' as const),
-      image: document.fields.image || undefined,
+      image: document.fields.image ? withBasePath(document.fields.image) : undefined,
       alt: document.fields.alt || undefined,
     };
   });
@@ -120,7 +126,7 @@ export function getPortfolio(): PortfolioContent {
       role: site.fields.role ?? 'Writer / Director / Producer',
       location: site.fields.location ?? '',
       headline: site.fields.headline ?? '',
-      image: site.fields.image ?? '',
+      image: withBasePath(site.fields.image ?? ''),
       imageAlt: site.fields.imageAlt ?? `${site.fields.name ?? 'Ravi Rekhi'} portrait`,
       about: site.body.split('\n\n').filter((paragraph) => !paragraph.startsWith('## ')),
       fieldNote: site.fields.fieldNote ?? '',
