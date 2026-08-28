@@ -696,5 +696,5 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .about-section { min-height: 0; }
 .journal-shell .film-entry { grid-template-columns: minmax(380px, 1.25fr) minmax(320px, .75fr); }
 .journal-shell .portrait-grid { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 760px) { .journal-topbar { grid-template-columns: auto 1fr auto; gap: 14px; } .journal-topbar .section-nav { gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame { min-height: 340px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } }
+@media (max-width: 760px) { .journal-topbar { grid-template-columns: auto auto; gap: 14px; } .journal-topbar .section-nav { grid-column: 1 / -1; grid-row: 2; gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame { min-height: 340px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } }
 @media (max-width: 480px) { .portrait-grid { gap: 22px 10px; } .portrait-tile figcaption { display: grid; gap: 4px; } }
