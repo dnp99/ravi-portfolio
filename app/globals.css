@@ -683,6 +683,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .section-nav { display: flex; flex-wrap: wrap; gap: 14px 20px; width: auto; }
 .journal-shell .section-nav a { gap: 0; }
 .journal-shell .section-nav a span { display: none; }
+.journal-shell .section-label {
+  font-size: clamp(13px, 1.05vw, 16px);
+  letter-spacing: .18em;
+}
+.journal-shell .section-label::before {
+  width: 42px;
+  margin-right: 16px;
+}
 .contact-icon { width: 15px; height: 15px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.7; }
 .contact-icon-fill { fill: currentColor; stroke: none; }
 .journal-topbar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 18px 0; border-bottom: 1px solid var(--line); background: var(--header-background); }
@@ -705,5 +713,5 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .film-still-featured { grid-column: 1 / -1; min-height: 430px; }
 .film-still img { object-fit: contain; }
 .journal-shell .portrait-grid { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 760px) { .journal-shell { padding-top: 82px; } .journal-topbar { position: fixed; top: 0; left: 0; right: 0; width: 100%; grid-template-columns: auto auto; gap: 14px; padding: 14px 22px 12px; } .journal-topbar .section-nav { grid-column: 1 / -1; grid-row: 2; gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .about-layout { grid-template-columns: 1fr; gap: 28px; } .about-portrait { max-width: 280px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame, .film-still-featured { min-height: 340px; } .film-still { min-height: 150px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } .gallery-lightbox { gap: 8px; padding: 54px 10px 24px; } .gallery-stage { width: calc(100vw - 80px); height: 78vh; } .gallery-control { width: 32px; height: 32px; font-size: 16px; } .gallery-caption { gap: 8px; padding: 12px 10px; font-size: 10px; } .gallery-caption small { display: none; } }
+@media (max-width: 760px) { .journal-shell { padding-top: 82px; } .journal-topbar { position: fixed; top: 0; left: 0; right: 0; width: 100%; grid-template-columns: auto auto; gap: 14px; padding: 14px 22px 12px; } .journal-topbar .section-nav { grid-column: 1 / -1; grid-row: 2; gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .section-label { font-size: 12px; } .journal-shell .about-layout { grid-template-columns: 1fr; gap: 28px; } .about-portrait { max-width: 280px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame, .film-still-featured { min-height: 340px; } .film-still { min-height: 150px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } .gallery-lightbox { gap: 8px; padding: 54px 10px 24px; } .gallery-stage { width: calc(100vw - 80px); height: 78vh; } .gallery-control { width: 32px; height: 32px; font-size: 16px; } .gallery-caption { gap: 8px; padding: 12px 10px; font-size: 10px; } .gallery-caption small { display: none; } }
 @media (max-width: 480px) { .portrait-grid { gap: 22px 10px; } .portrait-tile figcaption { display: grid; gap: 4px; } }
