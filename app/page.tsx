@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ImageGallery from '../components/ImageGallery';
 import { getPortfolio } from '../lib/content';
 
 const portfolio = getPortfolio();
@@ -111,16 +112,13 @@ export default function Home() {
           <section className="content-section portraits-section" id="portraits">
             <SectionLabel>Selected film portraits</SectionLabel>
             <p className="section-intro">{portfolio.portraitsIntro}</p>
-            <div className="portrait-grid">
-              {portfolio.portraits.map((portrait) => (
-                <figure className={`portrait-tile portrait-tile-${Number(portrait.number) % 3}`} key={portrait.number}>
-                  <div className={`portrait-placeholder portrait-placeholder-${portrait.orientation}`}>
-                    {portrait.image ? <Image src={portrait.image} alt={portrait.alt ?? portrait.title} fill sizes="(max-width: 760px) 50vw, 30vw" /> : <span>{portrait.number}</span>}
-                  </div>
-                  <figcaption><strong>{portrait.title}</strong><span>{portrait.note}</span></figcaption>
-                </figure>
-              ))}
-            </div>
+            <ImageGallery items={portfolio.portraits.filter((portrait) => portrait.image).map((portrait) => ({
+              src: portrait.image!,
+              alt: portrait.alt ?? portrait.title,
+              title: portrait.title,
+              note: portrait.note,
+              orientation: portrait.orientation,
+            }))} />
           </section>
 
           <section className="content-section development-section" id="development">
