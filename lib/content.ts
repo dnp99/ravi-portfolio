@@ -26,6 +26,7 @@ export interface PortraitEntry {
 export interface DevelopmentProject {
   title: string;
   format: string;
+  credits: string;
   description: string;
 }
 
@@ -106,6 +107,7 @@ export function getPortfolio(): PortfolioContent {
     return {
       title: document.fields.title ?? 'Untitled project',
       format: document.fields.format ?? 'Narrative project',
+      credits: document.fields.credits ?? '',
       description: document.body,
     };
   });

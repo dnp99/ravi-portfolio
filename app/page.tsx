@@ -130,7 +130,7 @@ export default function Home() {
               <article className="development-entry" key={project.title}>
                 <p className="project-number">{project.format}</p>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <div className="development-copy"><p>{project.description}</p>{project.credits && <p className="development-credits">{project.credits}</p>}</div>
               </article>
             ))}
           </section>
