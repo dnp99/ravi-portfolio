@@ -649,11 +649,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .portrait-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 56px; }
 .portrait-tile { margin: 0; }
 .portrait-placeholder { position: relative; aspect-ratio: 3 / 2; overflow: hidden; display: flex; align-items: flex-end; padding: 15px; background: linear-gradient(145deg, #3d3830, #161515 70%); }
-.portrait-placeholder-portrait { aspect-ratio: 2 / 3; }
+.portrait-placeholder-portrait { aspect-ratio: 3 / 2; background: #d9d0c4; }
 .portrait-tile-1 .portrait-placeholder { background: linear-gradient(155deg, #65706b, #1d2321 64%); }
 .portrait-tile-2 .portrait-placeholder { background: linear-gradient(145deg, #926b53, #2c211d 68%); }
 .portrait-placeholder:not(:has(img))::after { content: ''; position: absolute; inset: 15% 15% 20%; border: 1px solid rgba(238,229,215,.25); border-radius: 50% 48% 42% 50%; transform: rotate(12deg); }
-.portrait-placeholder img { object-fit: cover; }
+.portrait-placeholder img { object-fit: contain; }
 .portrait-placeholder span { position: relative; z-index: 1; color: rgba(238,229,215,.62); font: 12px var(--mono); }
 .portrait-placeholder { cursor: zoom-in; border: 0; width: 100%; padding: 0; text-align: left; }
 .gallery-open { position: absolute; right: 14px; bottom: 12px; z-index: 1; padding: 7px 9px; color: #f5f0e7; background: rgba(35,29,24,.74); font: 10px var(--mono); letter-spacing: .04em; opacity: 0; transition: opacity .2s ease; }
