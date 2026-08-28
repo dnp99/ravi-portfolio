@@ -7,6 +7,7 @@ export interface FilmProject {
   year: string;
   runtime: string;
   logline: string;
+  credits: string;
   notes: string[];
   link?: string;
   images: string[];
@@ -84,6 +85,7 @@ export function getPortfolio(): PortfolioContent {
       year: document.fields.year ?? '',
       runtime: document.fields.runtime ?? '',
       logline: document.body,
+      credits: document.fields.credits ?? '',
       notes: document.fields.notes?.split('|').map((note) => note.trim()).filter(Boolean) ?? [],
       link: document.fields.videoUrl || undefined,
       images: document.fields.gallery?.split('|').map((image) => image.trim()).filter(Boolean) ?? [],

@@ -104,6 +104,7 @@ export default function Home() {
                     <h3>{film.title}</h3>
                     <div className="film-meta"><span>{film.year}</span><span>{film.runtime}</span></div>
                     <p className="film-logline">{film.logline}</p>
+                    {film.credits && <p className="film-credits">{film.credits}</p>}
                     <ul className="film-notes">{film.notes.map((note) => <li key={note}>{note}</li>)}</ul>
                     {film.link && <a className="inline-link" href={film.link} target="_blank" rel="noreferrer">Watch the film <Arrow /></a>}
                   </div>

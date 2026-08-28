@@ -644,6 +644,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .film-content h3 { margin: 16px 0 8px; font: 400 clamp(42px, 5vw, 74px)/.95 var(--display); letter-spacing: -.065em; }
 .film-meta { display: flex; gap: 18px; color: var(--accent); font: 11px var(--mono); text-transform: uppercase; }
 .film-logline { margin: 28px 0 0; color: var(--text); font: 20px/1.5 var(--display); }
+.film-credits { margin: 18px 0 0; color: var(--muted); font: 12px/1.6 var(--mono); }
 .film-notes { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0; padding: 0; list-style: none; }
 .film-notes li { padding: 7px 10px; border: 1px solid var(--line); color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
 .portrait-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 56px; }
@@ -702,7 +703,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .film-stills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .film-still { position: relative; min-height: 190px; overflow: hidden; background: #302821; }
 .film-still-featured { grid-column: 1 / -1; min-height: 430px; }
-.film-still img { object-fit: cover; }
+.film-still img { object-fit: contain; }
 .journal-shell .portrait-grid { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 760px) { .journal-shell { padding-top: 82px; } .journal-topbar { position: fixed; top: 0; left: 0; right: 0; width: 100%; grid-template-columns: auto auto; gap: 14px; padding: 14px 22px 12px; } .journal-topbar .section-nav { grid-column: 1 / -1; grid-row: 2; gap: 12px; } .journal-topbar .section-nav a { font-size: 10px; } .journal-shell .about-layout { grid-template-columns: 1fr; gap: 28px; } .about-portrait { max-width: 280px; } .journal-shell .film-entry { grid-template-columns: 1fr; } .film-frame, .film-still-featured { min-height: 340px; } .film-still { min-height: 150px; } .journal-shell .portrait-grid { grid-template-columns: repeat(2, 1fr); } .development-entry { grid-template-columns: 1fr; gap: 12px; } .gallery-lightbox { gap: 8px; padding: 54px 10px 24px; } .gallery-stage { width: calc(100vw - 80px); height: 78vh; } .gallery-control { width: 32px; height: 32px; font-size: 16px; } .gallery-caption { gap: 8px; padding: 12px 10px; font-size: 10px; } .gallery-caption small { display: none; } }
 @media (max-width: 480px) { .portrait-grid { gap: 22px 10px; } .portrait-tile figcaption { display: grid; gap: 4px; } }
