@@ -8,7 +8,7 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() => (
     typeof document !== "undefined" && document.documentElement.dataset.theme === "light"
       ? "light"
-      : "dark"
+      : "light"
   ));
 
   function toggleTheme() {

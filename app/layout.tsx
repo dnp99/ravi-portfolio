@@ -56,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(() => { const saved = localStorage.getItem("portfolio-theme"); document.documentElement.dataset.theme = saved === "light" ? "light" : "dark"; })()`,
+            __html: `(() => { const saved = localStorage.getItem("portfolio-theme"); document.documentElement.dataset.theme = saved === "dark" ? "dark" : "light"; })()`,
           }}
         />
         {children}
