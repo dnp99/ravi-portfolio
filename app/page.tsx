@@ -62,13 +62,10 @@ export default function Home() {
 
         <header className="intro-panel" id="top">
           <div className="intro-main">
-            <div className="intro-copy">
-              <p className="intro-location">{portfolio.profile.location}</p>
-              <h1>{portfolio.profile.name}</h1>
-              <h2>{portfolio.profile.role}</h2>
-              <p className="intro-headline">{portfolio.profile.headline}</p>
-            </div>
-            {portfolio.profile.image && <div className="intro-portrait"><Image src={portfolio.profile.image} alt={portfolio.profile.imageAlt} fill sizes="(max-width: 760px) 100vw, 28vw" priority /></div>}
+            <p className="intro-location">{portfolio.profile.location}</p>
+            <h1>{portfolio.profile.name}</h1>
+            <h2>{portfolio.profile.role}</h2>
+            <p className="intro-headline">{portfolio.profile.headline}</p>
           </div>
 
           <div className="intro-footer">
@@ -83,8 +80,11 @@ export default function Home() {
         <div className="content-panel">
           <section className="content-section about-section" id="about">
             <SectionLabel>About the work</SectionLabel>
-            <div className="about-copy">
-              {portfolio.profile.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <div className="about-layout">
+              <div className="about-copy">
+                {portfolio.profile.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+              {portfolio.profile.image && <figure className="about-portrait"><div><Image src={portfolio.profile.image} alt={portfolio.profile.imageAlt} fill sizes="(max-width: 760px) 100vw, 28vw" /></div><figcaption>Ravi Rekhi / Toronto</figcaption></figure>}
             </div>
             <div className="journal-note">
               <span>Field note / 01</span>
