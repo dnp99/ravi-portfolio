@@ -634,6 +634,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .film-list { display: grid; gap: 90px; margin-top: 56px; }
 .film-entry { display: grid; grid-template-columns: minmax(260px, .92fr) minmax(240px, .8fr); gap: clamp(28px, 5vw, 70px); align-items: center; }
 .film-frame { position: relative; min-height: 430px; overflow: hidden; display: flex; align-items: flex-end; justify-content: space-between; padding: 22px; color: #f4e9d9; background: radial-gradient(circle at 72% 22%, #d8995c 0, #875337 22%, #332720 69%); box-shadow: 0 24px 60px rgba(0,0,0,.2); }
+.film-frame-image { object-fit: cover; z-index: 0; }
+.film-frame:has(.film-frame-image) { background: #302821; }
+.film-frame:has(.film-frame-image)::after { content: ''; position: absolute; inset: 0; z-index: 0; background: linear-gradient(0deg, rgba(21,19,17,.62), transparent 55%); }
 .film-frame::before { content: ''; position: absolute; inset: 13% 18%; border: 1px solid rgba(245,233,214,.42); transform: rotate(-4deg); }
 .film-frame-grain { position: absolute; inset: 0; opacity: .18; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); mix-blend-mode: screen; }
 .film-frame-mark, .film-frame-caption { position: relative; z-index: 1; font: 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
@@ -649,6 +652,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .portrait-tile-1 .portrait-placeholder { background: linear-gradient(155deg, #65706b, #1d2321 64%); }
 .portrait-tile-2 .portrait-placeholder { background: linear-gradient(145deg, #926b53, #2c211d 68%); }
 .portrait-placeholder::after { content: ''; position: absolute; inset: 15% 15% 20%; border: 1px solid rgba(238,229,215,.25); border-radius: 50% 48% 42% 50%; transform: rotate(12deg); }
+.portrait-placeholder img { object-fit: cover; }
 .portrait-placeholder span { position: relative; z-index: 1; color: rgba(238,229,215,.62); font: 12px var(--mono); }
 .portrait-tile figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; color: var(--muted); font: 11px var(--mono); }
 .portrait-tile figcaption strong { color: var(--text); font-weight: 500; }

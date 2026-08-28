@@ -7,19 +7,14 @@
   },
   "scripts": {
     "dev": "next dev",
-    "studio": "sanity dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@sanity/image-url": "^2.1.1",
-    "@sanity/vision": "^6.11.0",
     "next": "16.2.6",
-    "next-sanity": "^13.3.3",
     "react": "19.2.6",
-    "react-dom": "19.2.6",
-    "sanity": "^6.11.0"
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.2.1",

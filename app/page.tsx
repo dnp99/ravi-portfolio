@@ -1,4 +1,7 @@
-import { portfolio } from '../content/portfolio';
+import Image from 'next/image';
+import { getPortfolio } from '../lib/content';
+
+const portfolio = getPortfolio();
 
 function Arrow() {
   return <span aria-hidden="true">{'\u2197'}</span>;
@@ -30,6 +33,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function FilmFrame({ film }: { film: (typeof portfolio.films)[number] }) {
   return (
     <div className={`film-frame film-frame-${film.tone}`} aria-label={`${film.title} film still placeholder`}>
+      {film.image && <Image className="film-frame-image" src={film.image} alt={film.alt ?? `${film.title} film still`} fill sizes="(max-width: 760px) 100vw, 58vw" />}
       <span className="film-frame-grain" aria-hidden="true" />
       <span className="film-frame-mark">{film.title}</span>
       <span className="film-frame-caption">still / {film.year}</span>
@@ -79,7 +83,7 @@ export default function Home() {
             </div>
             <div className="journal-note">
               <span>Field note / 01</span>
-              <p>The best stories usually begin with a person trying to make an ordinary day feel manageable.</p>
+              <p>{portfolio.profile.fieldNote}</p>
             </div>
           </section>
 
@@ -109,7 +113,9 @@ export default function Home() {
             <div className="portrait-grid">
               {portfolio.portraits.map((portrait) => (
                 <figure className={`portrait-tile portrait-tile-${Number(portrait.number) % 3}`} key={portrait.number}>
-                  <div className="portrait-placeholder"><span>{portrait.number}</span></div>
+                  <div className="portrait-placeholder">
+                    {portrait.image ? <Image src={portrait.image} alt={portrait.alt ?? portrait.title} fill sizes="(max-width: 760px) 50vw, 30vw" /> : <span>{portrait.number}</span>}
+                  </div>
                   <figcaption><strong>{portrait.title}</strong><span>{portrait.note}</span></figcaption>
                 </figure>
               ))}
