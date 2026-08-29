@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ImageGallery from '../components/ImageGallery';
+import JournalHeader from '../components/JournalHeader';
 import { getPortfolio } from '../lib/content';
 
 const portfolio = getPortfolio();
@@ -50,15 +51,7 @@ export default function Home() {
       <div className="ambient-glow" aria-hidden="true" />
 
       <main className="portfolio-shell journal-shell">
-        <div className="journal-topbar">
-          <a className="wordmark" href="#top" aria-label="Ravi Rekhi, home">RR<span>.</span></a>
-          <nav className="section-nav" aria-label="Portfolio sections">
-            <a href="#about"><span />About</a>
-            <a href="#films"><span />Films</a>
-            <a href="#portraits"><span />Portraits</a>
-            <a href="#contact"><span />Contact</a>
-          </nav>
-        </div>
+        <JournalHeader />
 
         <header className="intro-panel" id="top">
           <div className="intro-main">
