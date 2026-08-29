@@ -53,7 +53,7 @@ export default function ImageGallery({ items, variant = 'portrait' }: { items: G
         <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Full-size film portrait" onClick={() => setActiveIndex(null)}>
           <button className="gallery-close" type="button" onClick={() => setActiveIndex(null)} aria-label="Close gallery">×</button>
           <button className="gallery-control gallery-prev" type="button" onClick={(event) => { event.stopPropagation(); setActiveIndex((activeIndex - 1 + items.length) % items.length); }} aria-label="Previous image">←</button>
-          <div className="gallery-stage" onClick={(event) => event.stopPropagation()}>
+          <div className={`gallery-stage gallery-stage-${items[activeIndex].orientation}`} onClick={(event) => event.stopPropagation()}>
             <Image src={items[activeIndex].src} alt={items[activeIndex].alt} fill sizes="90vw" className="gallery-image" priority />
             <div className="gallery-caption"><strong>{items[activeIndex].title}</strong><span>{items[activeIndex].note}</span><small>{activeIndex + 1} / {items.length}</small></div>
           </div>
