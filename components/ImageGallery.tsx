@@ -11,8 +11,9 @@ export interface GalleryItem {
   orientation: 'landscape' | 'portrait';
 }
 
-export default function ImageGallery({ items }: { items: GalleryItem[] }) {
+export default function ImageGallery({ items, variant = 'portrait' }: { items: GalleryItem[]; variant?: 'portrait' | 'film' }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const isFilm = variant === 'film';
 
   useEffect(() => {
     if (activeIndex === null) return;
@@ -29,15 +30,22 @@ export default function ImageGallery({ items }: { items: GalleryItem[] }) {
 
   return (
     <>
-      <div className="portrait-grid">
+      <div className={isFilm ? 'film-stills' : 'portrait-grid'}>
         {items.map((item, index) => (
-          <figure className={`portrait-tile portrait-tile-${index % 3}`} key={item.src}>
-            <button className={`portrait-placeholder portrait-placeholder-${item.orientation}`} type="button" onClick={() => setActiveIndex(index)} aria-label={`Open ${item.title}`}>
-              <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 50vw, 30vw" />
+          isFilm ? (
+            <button className={`film-still ${index === 0 ? 'film-still-featured' : ''}`} type="button" onClick={() => setActiveIndex(index)} aria-label={`Open ${item.title} image ${index + 1}`} key={item.src}>
+              <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 58vw" />
               <span className="gallery-open" aria-hidden="true">View full image ↗</span>
             </button>
-            <figcaption><strong>{item.title}</strong><span>{item.note}</span></figcaption>
-          </figure>
+          ) : (
+            <figure className={`portrait-tile portrait-tile-${index % 3}`} key={item.src}>
+              <button className={`portrait-placeholder portrait-placeholder-${item.orientation}`} type="button" onClick={() => setActiveIndex(index)} aria-label={`Open ${item.title}`}>
+                <Image src={item.src} alt={item.alt} fill sizes="(max-width: 760px) 50vw, 30vw" />
+                <span className="gallery-open" aria-hidden="true">View full image ↗</span>
+              </button>
+              <figcaption><strong>{item.title}</strong><span>{item.note}</span></figcaption>
+            </figure>
+          )
         ))}
       </div>
 
