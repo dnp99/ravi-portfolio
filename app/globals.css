@@ -61,8 +61,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 12%, rgba(255, 112, 72, 0.09), transparent 28rem),
-    radial-gradient(circle at 78% 72%, rgba(111, 193, 156, 0.05), transparent 32rem);
+    radial-gradient(circle at 18% 12%, rgba(184, 87, 61, 0.09), transparent 28rem),
+    radial-gradient(circle at 78% 72%, rgba(105, 137, 117, 0.08), transparent 32rem);
 }
 
 .portfolio-shell {
@@ -622,7 +622,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   --header-background: #211c18;
   --display: Georgia, 'Times New Roman', serif;
 }
-:root[data-theme="light"] { --background: #eee8dd; --surface: #f5f0e7; --surface-raised: #e2d8ca; --text: #2d2924; --muted: #70665b; --faint: #948878; --accent: #a85235; --line: rgba(45, 41, 36, 0.17); --header-background: #e4dbcf; }
+:root[data-theme="light"] { --background: #ebe5da; --surface: #f5f0e7; --surface-raised: #ded5c8; --text: #292521; --muted: #6e675e; --faint: #93897d; --accent: #b8573d; --accent-soft: rgba(184, 87, 61, 0.14); --line: rgba(41, 37, 33, 0.16); --header-background: #ded5c8; }
 .journal-shell .intro-panel h1 { font-family: var(--display); font-weight: 400; letter-spacing: -.065em; }
 .journal-shell .intro-panel h2 { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 .journal-shell .intro-headline { font-family: var(--display); font-size: 20px; line-height: 1.55; }
