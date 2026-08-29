@@ -671,6 +671,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .gallery-close { position: absolute; top: 20px; right: 24px; width: 42px; height: 42px; padding: 0; border-radius: 50%; font-size: 24px; line-height: 1; }
 .gallery-control { width: 42px; height: 42px; border-radius: 50%; font-size: 20px; }
 .gallery-close:hover, .gallery-control:hover { border-color: #f5f0e7; }
+.gallery-lightbox .gallery-close { position: fixed; top: max(16px, env(safe-area-inset-top)); right: max(16px, env(safe-area-inset-right)); z-index: 60; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; line-height: 1; }
 .portrait-tile figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; color: var(--muted); font: 11px var(--mono); }
 .portrait-tile figcaption strong { color: var(--text); font-weight: 500; }
 .development-entry { display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
