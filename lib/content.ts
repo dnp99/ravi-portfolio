@@ -12,6 +12,7 @@ export interface FilmProject {
   link?: string;
   images: string[];
   imageAlt?: string;
+  imageOrientation: 'landscape' | 'portrait';
   tone: 'amber' | 'blue' | 'red';
 }
 
@@ -96,6 +97,7 @@ export function getPortfolio(): PortfolioContent {
       link: document.fields.videoUrl || undefined,
       images: document.fields.gallery?.split('|').map((image) => withBasePath(image.trim())).filter(Boolean) ?? [],
       imageAlt: document.fields.heroAlt || `${document.fields.title ?? 'Film'} still`,
+      imageOrientation: document.fields.imageOrientation === 'portrait' ? ('portrait' as const) : ('landscape' as const),
       tone: asTone(document.fields.tone ?? 'amber'),
     };
   });

@@ -31,6 +31,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /ravi-portfolio
+          NEXT_PUBLIC_SITE_URL: https://dnp99.github.io/ravi-portfolio
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

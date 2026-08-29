@@ -626,7 +626,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .intro-panel h1 { font-family: var(--display); font-weight: 400; letter-spacing: -.065em; }
 .journal-shell .intro-panel h2 { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 .journal-shell .intro-headline { font-family: var(--display); font-size: 20px; line-height: 1.55; }
-.journal-shell .content-section { padding-top: clamp(100px, 16vh, 180px); padding-bottom: clamp(100px, 16vh, 180px); }
+.journal-shell .content-section { padding-top: clamp(84px, 10vh, 132px); padding-bottom: clamp(84px, 10vh, 132px); }
 .journal-shell .about-copy p:first-child { font-family: var(--display); font-size: clamp(24px, 2.8vw, 38px); line-height: 1.3; color: var(--text); }
 .journal-note { margin-top: 64px; padding: 20px 0 0 22px; border-left: 1px solid var(--accent); max-width: 420px; }
 .journal-note span { color: var(--accent); font: 10px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
@@ -712,7 +712,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journal-shell .film-entry { grid-template-columns: minmax(380px, 1.25fr) minmax(320px, .75fr); }
 .film-stills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .film-still { position: relative; min-height: 190px; overflow: hidden; width: 100%; padding: 0; border: 0; background: var(--background); cursor: zoom-in; }
-.film-still-featured { grid-column: 1 / -1; min-height: 430px; }
+.film-still-featured { grid-column: 1 / -1; min-height: clamp(430px, 38vw, 620px); }
+.film-still-portrait { aspect-ratio: 4 / 5; min-height: 0; }
+.film-still-featured.film-still-portrait { min-height: 0; }
 .film-still img { object-fit: contain; }
 .film-still .gallery-open { position: absolute; right: 14px; bottom: 12px; z-index: 1; width: max-content; max-width: calc(100% - 28px); padding: 7px 9px; color: #f5f0e7; background: rgba(35,29,24,.74); font: 10px var(--mono); letter-spacing: .04em; white-space: nowrap; opacity: 0; transition: opacity .2s ease; }
 .film-still:hover .gallery-open, .film-still:focus-visible .gallery-open { opacity: 1; }

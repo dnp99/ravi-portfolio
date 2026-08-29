@@ -17,7 +17,9 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const siteUrl = "https://www.ravirekhi.com";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? `https://dnp99.github.io${basePath}`;
+const socialImage = `${siteUrl}/media/ravi-portrait.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: `${siteUrl}/og.png`,
+        url: socialImage,
         width: 1536,
         height: 1024,
         alt: "Ravi Rekhi, writer and director",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ravi Rekhi | Writer / Director / Producer",
     description: "Stories about private lives, strange systems, and the things people do to feel less alone.",
-    images: [`${siteUrl}/og.png`],
+    images: [socialImage],
   },
 };
 

@@ -39,7 +39,7 @@ function FilmFrame({ film }: { film: (typeof portfolio.films)[number] }) {
       alt: `${film.imageAlt ?? `${film.title} film still`} ${index + 1}`,
       title: film.title,
       note: film.year,
-      orientation: 'landscape' as const,
+      orientation: film.imageOrientation,
     }))} /> : <div className={`film-stills film-frame-${film.tone}`} aria-label={`${film.title} stills`}><div className="film-frame"><span className="film-frame-grain" aria-hidden="true" /><span className="film-frame-mark">{film.title}</span><span className="film-frame-caption">still / {film.year}</span></div></div>
   );
 }

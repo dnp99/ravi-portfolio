@@ -9,6 +9,7 @@ tone: amber
 featured: true
 gallery: /media/final-acts-of-love-poster.png
 heroAlt: Final Acts of Love poster
+imageOrientation: portrait
 videoUrl:
 ---
 
