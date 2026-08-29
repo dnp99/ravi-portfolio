@@ -1,7 +1,7 @@
 ---
-title: Untitled study 05
+title: Afternoon by the window
 location: Toronto, 2024
 number: 05
 image: /media/portrait-05.jpg
-alt: Minolta X-700 SLR film photograph
+alt: Houseplants and a clock beside a bright window
 ---

@@ -1,8 +1,8 @@
 ---
-title: Untitled study 03
+title: The tower through a veil
 location: Toronto, 2024
 number: 03
 orientation: portrait
 image: /media/portrait-03.jpg
-alt: Minolta X-700 SLR film photograph
+alt: CN Tower rising through a hazy blue sky
 ---
