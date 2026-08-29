@@ -9,7 +9,7 @@ function Arrow() {
   return <span aria-hidden="true">{'\u2197'}</span>;
 }
 
-function ContactIcon({ kind }: { kind: 'instagram' | 'email' }) {
+function ContactIcon({ kind }: { kind: 'instagram' | 'email' | 'linktree' }) {
   if (kind === 'instagram') {
     return (
       <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -20,10 +20,20 @@ function ContactIcon({ kind }: { kind: 'instagram' | 'email' }) {
     );
   }
 
+  if (kind === 'email') {
+    return (
+      <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4.5 7 7.5 6 7.5-6" />
+      </svg>
+    );
+  }
+
   return (
     <svg className="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m4.5 7 7.5 6 7.5-6" />
+      <path d="M10.2 13.8 13.8 10.2" />
+      <path d="m7.5 15.8-1.1 1.1a3.2 3.2 0 1 1-4.5-4.5l3.8-3.8a3.2 3.2 0 0 1 4.5 0" />
+      <path d="m16.5 8.2 1.1-1.1a3.2 3.2 0 1 1 4.5 4.5l-3.8 3.8a3.2 3.2 0 0 1-4.5 0" />
     </svg>
   );
 }
@@ -66,6 +76,7 @@ export default function Home() {
             <div className="profile-links">
               <a href={portfolio.contact.instagram} target="_blank" rel="noreferrer"><ContactIcon kind="instagram" />Instagram <Arrow /></a>
               <a href={`mailto:${portfolio.contact.email}`}><ContactIcon kind="email" />Email <Arrow /></a>
+              {portfolio.contact.linktree && <a href={portfolio.contact.linktree} target="_blank" rel="noreferrer"><ContactIcon kind="linktree" />Linktree <Arrow /></a>}
             </div>
           </div>
         </header>

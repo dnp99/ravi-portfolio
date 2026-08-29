@@ -49,7 +49,7 @@ export interface PortfolioContent {
   portraitsIntro: string;
   portraits: PortraitEntry[];
   development: DevelopmentProject[];
-  contact: { email: string; instagram: string };
+  contact: { email: string; instagram: string; linktree: string };
 }
 
 function readDocument(filePath: string) {
@@ -142,6 +142,7 @@ export function getPortfolio(): PortfolioContent {
     contact: {
       email: site.fields.email ?? '',
       instagram: site.fields.instagram ?? '',
+      linktree: site.fields.linktree ?? '',
     },
   };
 }
