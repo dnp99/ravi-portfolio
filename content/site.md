@@ -7,7 +7,7 @@ image: /media/ravi-portrait.jpg
 imageAlt: Ravi Rekhi standing on a city street
 availability: Open to thoughtful collaborations
 email: ravirekhi11@gmail.com
-instagram: https://www.instagram.com/
+instagram: https://www.instagram.com/ravi_rekhi/
 filmIntro: A selection of short-form work, experiments, and stories currently finding their shape.
 portraitsIntro: All shots taken on a Minolta X-700 SLR, and processed and scanned at Downtown Camera, Toronto.
 fieldNote: The best stories usually begin with a person trying to make an ordinary day feel manageable.
